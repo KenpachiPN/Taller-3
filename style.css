@@ -1,0 +1,9 @@
+*{
+    font-family: 'Merriweather', serif;
+    background: wheat;
+}
+h1 {
+    color: aliceblue;
+    text-align: center;
+    margin: 20px;
+}
