@@ -1,40 +1,26 @@
 
-alert("Ahora calcularemos un algoritmo  se está realizando un estudio del tráfico en una de las calles de su ciudad.");
-
-var aut, cam, con, mot, per, pert, tip, tur, veh;
-veh = 4;
-tur = 0;
-pert = 0;
-aut = 0;
-cam = 0;
-mot = 0;
-con = 1;
-
-while (con <= veh) {
-  tip = Number(prompt("Ingrese el Tipo de vehiculo que pasa(turismo, autobus, camion o Motocicleta."));
-  con += 1;
-
-  if (tip === "turismo") {
-    per = Number(prompt("Cantidad de personas:"));
-    tur += 1;
-    pert = per + pert;
-  } else {
-    if (tip === "Autob\u00fas") {
-      aut += 1;
-    } else {
-      if (tip === "Cami\u00f3n") {
-        cam += 1;
-      }
+alert("Ahora calcularemos un algoritmo en el Depto. de Seguridad Pública y Transito de desea saber de los n autos que entran a la ciudad de Bogotá.");
+let vehiculos = Number(prompt("Digite la cantidad de vehiculos que ingresaron a Bogotá"));
+let contador = 1;
+while (contador <= vehiculos) {
+    contador ++;
+    let placa = Number(prompt("Digite el último digito de la placa"));
+    if (placa == "1" || placa == "2") {
+        alert("Su calcomania es Amarilla");
     }
-  }
-
-  if (tip === "Moto") {
-    mot += 1;
-  }
+    else if (placa == "3" || placa == "4") {
+        alert("Su calcomania es Rosa");
+    }
+    else if (placa == "5" || placa == "6") {
+        alert("Su calcomania es Roja");
+    }
+    else if (placa == "7" || placa == "8") {
+        alert("Su calcomania es Verde");
+    }
+    else if (placa == "9" || placa == "0") {
+        alert("Su calcomania es Azul");
+    }
+    else {
+        alert("Error al digitar");
+    }
 }
-
-alert("Cantidad de autobuses", aut);
-alert(" Cantidad de camiones", cam);
-alert("Cantidad de motocicletas", mot);
-alert(" Cantidad de turismo", tur);
-alert("Cantidad de personas en vehiculos de turismo", pert);
