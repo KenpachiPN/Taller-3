@@ -1,15 +1,18 @@
 
-    alert("Ahora calcularemos la distancia que separa al avión del proyectil, hasta que estén a 10,000 mtrs. o más");
-    let segundos = 0;
-    let avion = 222222;
-    let misil = 222222;
-    let acel = 20;
-    let acem = 10;
-while (acel - acem <= 10000){
-    segundos ++;
-    acel += 20 + acel
-    acem += 10 + acem
-        alert("En " + segundos + " Segundos");
-        alert("La distancia del avion es: " + acel);
-        alert("La distancia del misil es: " + acem);
+    alert("Ahora calcularemos el dinero que recibirá el vendedor a la semana");
+
+let vendedor = Number(prompt("Ingrese la cantidad de vendedores"));
+let sueldobase = 1000;
+let contador = 1;
+while (contador <= vendedor) {
+    contador ++;
+    let nom = prompt("Ingrese su nombre");
+    let venta1 = Number(prompt( nom  + " Ingrese el dinero de su venta 1"));
+    let venta2 = Number(prompt( nom  + " Ingrese el dinero de su venta 2"));
+    let venta3 = Number(prompt( nom  + " Ingrese el dinero de su venta 3"));
+    let comisiones = venta1 +  venta2 + venta3 * 0.10;
+    let sueldototal = comisiones + sueldobase;
+        alert("El sueldo de " +  nom + " es de: $" + sueldobase + " debido a qué hizo 3 ventas en la semana "  + "\n" + 
+                "Su sueldo total es de: $" + sueldototal);
+     
 }
