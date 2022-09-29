@@ -1,18 +1,30 @@
 
-    alert("Ahora calcularemos el dinero que recibirá el vendedor a la semana");
+    alert("Ahora calcularemos el promedio ponderado para alumno del ITT.");
 
-let vendedor = Number(prompt("Ingrese la cantidad de vendedores"));
-let sueldobase = 1000;
+let alum = Number(prompt("Ingrese la cantidad de alumnos"));
 let contador = 1;
-while (contador <= vendedor) {
+let credFund = 3.5;
+let credBd = 4.5;
+let credEtic = 3.5;
+let resulf = 3.5;
+let resulb = 4.0;
+let resulet = 4.5;
+while (contador <= alum) {
     contador ++;
     let nom = prompt("Ingrese su nombre");
-    let venta1 = Number(prompt( nom  + " Ingrese el dinero de su venta 1"));
-    let venta2 = Number(prompt( nom  + " Ingrese el dinero de su venta 2"));
-    let venta3 = Number(prompt( nom  + " Ingrese el dinero de su venta 3"));
-    let comisiones = venta1 +  venta2 + venta3 * 0.10;
-    let sueldototal = comisiones + sueldobase;
-        alert("El sueldo de " +  nom + " es de: $" + sueldobase + " debido a qué hizo 3 ventas en la semana "  + "\n" + 
-                "Su sueldo total es de: $" + sueldototal);
-     
+    let fund = Number(prompt( nom  + " Ingrese la calificación que obtuvo en la  materia fundamentos"));
+    let bd = Number(prompt( nom  + " Ingrese la calificación que obtuvo en la  materia BD"));
+    let etica = Number(prompt( nom  + " Ingrese la calificación que obtuvo en la  materia Ética"));
+    let resultcred = fund * credFund;
+    let resultbd = bd * credBd;
+    let resultetic = fund * credEtic;
+    let summat = resultbd + resultcred + resultetic + resulb + resulet + resulf;
+    let sumcred = credBd + credFund + credEtic;
+    let totalfund = summat * credFund / sumcred;
+    let totalBd = summat * credBd / sumcred;
+    let totalEtic = summat * credEtic / sumcred;
+            alert("El promedio de " +  nom + " en la materia de Fundamentos, es de: " + totalfund + "\n" + 
+                    "El promedio de " +  nom + " en la materia de BD, es de: " + totalBd + "\n" +
+                    "El promedio de " +  nom + " en la materia de Ética, es de: " + totalEtic);
+    
 }
