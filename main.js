@@ -6,10 +6,10 @@ con = 1;
 a = 0;
 b = 0;
 c = 0;
-can = Number.parseInt(input("Digite la cantidad de alumnos que van a votar"));
+can = Number(prompt("Digite la cantidad de alumnos que van a votar"));
 
 while (con <= can) {
-    rep = input("Digite el representante por el que va a votar (A,B o C):");
+    rep = Number(prompt("Digite el representante por el que va a votar (A o B): "));
     con += 1;
 
     if (rep === "A") {
@@ -28,33 +28,33 @@ totb = b / can * 100;
 totc = c / can * 100;
 
 if (tota > totb && tota > totc) {
-    console.log("El porcentaje de la votacion del representante A es", tota);
-    console.log(" El porcentaje de la votacion del representante B es", totb);
-    console.log("El porcentaje de la votacion del representante C es", totc);
+    alert("El porcentaje de la votacion del representante A es", tota);
+    alert(" El porcentaje de la votacion del representante B es", totb);
+    calert("El porcentaje de la votacion del representante C es", totc);
 } else {
     if (totb > tota && totb > totc) {
-        console.log("El porcentaje de la votacion del representante A es", tota);
-        console.log("El porcentaje de la votacion del representante B es", totb);
-        console.log("El porcentaje de la votacion del representante C es", totc);
+        alert("El porcentaje de la votacion del representante A es", tota);
+        alert("El porcentaje de la votacion del representante B es", totb);
+        alert("El porcentaje de la votacion del representante C es", totc);
     } else {
         if (totc > tota && totc > totb) {
-            console.log("El porcentaje de la votacion del representante A es", tota);
-            console.log("El porcentaje de la votacion del representante B es", totb);
-            console.log("El porcentaje de la votacion del representante C es", totc);
+            alert("El porcentaje de la votacion del representante A es", tota);
+            alert("El porcentaje de la votacion del representante B es", totb);
+            alert("El porcentaje de la votacion del representante C es", totc);
         } else {
             if (totb === tota && totb === totc) {
-                console.log("SE CANCELAN ELECCIONES DE REPRESENTANTE");
+                alert("SE CANCELAN ELECCIONES DE REPRESENTANTE");
             } else {
                 if (tota >= totb && totb > totc) {
                     con = 1;
                     a = 0;
                     b = 0;
-                    console.log("HAY UN EMPATE ENTRE A Y B");
+                    alert("HAY UN EMPATE ENTRE A Y B");
                     can = Number.parseInt(input("Digite la cantidad de alumnos que van a votar: "));
 
                     while (con <= can) {
                         con += 1;
-                        rep = input("Digite el representante por el que va a votar (A o B): ");
+                        rep = Number(prompt("Digite el representante por el que va a votar (A o B): "));
 
                         if (rep === "A") {
                             a += 1;
@@ -67,12 +67,12 @@ if (tota > totb && tota > totc) {
                     totb = b / can * 100;
 
                     if (tota >= 51) {
-                        console.log("El ganador de las votaciones es A con un", tota);
+                        alert("El ganador de las votaciones es A con un", tota);
                     } else {
                         if (totb >= 51) {
-                            console.log("El ganador de las votaciones es B con un", totb);
+                            alert("El ganador de las votaciones es B con un", totb);
                         } else {
-                            console.log("DOBLE EMPATE ENTRE A Y B");
+                            alert("DOBLE EMPATE ENTRE A Y B");
                         }
                     }
                 } else {
@@ -80,12 +80,12 @@ if (tota > totb && tota > totc) {
                         con = 1;
                         a = 0;
                         c = 0;
-                        console.log("HAY UN EMPATE ENTRE A Y C");
+                        alert("HAY UN EMPATE ENTRE A Y C");
                         can = Number.parseInt(input("Digite la cantidad de alumnos que van a votar: "));
 
                         while (con <= can) {
                             con += 1;
-                            rep = input("Digite el representante por el que va a votar (A o C): ");
+                            rep = Number(prompt("Digite el representante por el que va a votar (A o B): "));
 
                             if (rep === "A") {
                                 a += 1;
@@ -98,24 +98,24 @@ if (tota > totb && tota > totc) {
                         totc = c / can * 100;
 
                         if (tota >= 51) {
-                            console.log("El ganador de las votaciones es A con un", tota);
+                            alert("El ganador de las votaciones es A con un", tota);
                         } else {
                             if (totc >= 51) {
-                                console.log("El ganador de las votaciones es C con un", totc);
+                                alert("El ganador de las votaciones es C con un", totc);
                             } else {
-                                console.log("DOBLE EMPATE ENTRE A Y C");
+                                alert("DOBLE EMPATE ENTRE A Y C");
                             }
                         }
                     } else {
                         con = 1;
                         b = 0;
                         c = 0;
-                        console.log("HAY UN EMPATE ENTRE B Y C");
+                        alert("HAY UN EMPATE ENTRE B Y C");
                         can = Number.parseInt(input("Digite la cantidad de alumnos que van a votar: "));
 
                         while (con <= can) {
                             con += 1;
-                            rep = input("Digite el representante por el que va a votar (B o C): ");
+                            rep = Number(prompt("Digite el representante por el que va a votar (A o B): "));
 
                             if (rep === "B") {
                                 b += 1;
@@ -128,12 +128,12 @@ if (tota > totb && tota > totc) {
                         totc = c / can * 100;
 
                         if (totb >= 51) {
-                            console.log("El ganador de las votaciones es B con un", totb);
+                            alert("El ganador de las votaciones es B con un", totb);
                         } else {
                             if (totc >= 51) {
-                                console.log("El ganador de las votaciones es C con un", totc);
+                                alert("El ganador de las votaciones es C con un", totc);
                             } else {
-                                console.log("DOBLE EMPATE ENTRE B Y C");
+                                alert("DOBLE EMPATE ENTRE B Y C");
                             }
                         }
                     }
